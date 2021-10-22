@@ -1,16 +1,105 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Content */
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  @apply text-center bg-greydark;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body h1 {
+  @apply font-bold text-2xl sm:text-3xl md:text-5xl;
 }
 
-* {
-  box-sizing: border-box;
+/* Index */
+.homePage {
+  @apply bg-white p-6;
+}
+
+#explain {
+  @apply grid p-10 md:grid-cols-2;
+}
+
+body h2 {
+  @apply font-bold text-left text-xl p-2 sm:text-2xl md:text-3xl 2xl:text-3xl lg:py-5;
+}
+
+body p {
+  @apply text-lg text-left p-1 sm:text-xl md:text-2xl;
+}
+
+#acronym h2 {
+  @apply font-bold md:text-center;
+}
+
+#acronym p {
+  @apply font-bold text-blue text-center;
+}
+
+#acronym span {
+  @apply font-normal text-black;
+}
+
+/* Navbar */
+nav {
+  @apply relative flex flex-wrap justify-between bg-whitepure 
+          border-greylight border-b-2  divide-x-8 p-5;
+}
+
+#navbar-wrapper {
+  @apply container px-4 mx-auto flex flex-wrap justify-between;
+}
+
+#menu-bars {
+  @apply w-full relative flex justify-between sm:w-auto
+          sm:static sm:block sm:justify-start;
+}
+
+#menu-toggle {
+  @apply text-black cursor-pointer text-xl leading-none border border-solid
+         border-transparent rounded bg-transparent block sm:hidden
+         outline-none focus:outline-none px-5;
+}
+
+nav ul {
+  @apply flex flex-col sm:flex-row list-none sm:ml-auto p-1;
+}
+
+.nav-item {
+  @apply border-black cursor-pointer border-b-2 border-opacity-0 bg-whitepure
+         hover:opacity-75 hover:border-opacity-50 lg:text-lg xl:text-xl 2xl:text-2xl;
+}
+
+.nav-link {
+  @apply text-black flex font-semibold px-5 py-2;
+}
+
+.active {
+  @apply text-black flex font-semibold border-black border-b-2 border-opacity-100 
+          lg:text-lg xl:text-xl 2xl:text-2xl px-5 py-2;
+}
+
+.nav-lang {
+  @apply bg-whitepure cursor-pointer font-semibold lg:text-lg xl:text-xl 2xl:text-2xl;
+}
+
+/* Footer */
+footer {
+  @apply text-whitepure text-base bg-greydark;
+}
+
+footer div {
+  @apply container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row;
+}
+
+footer p {
+  @apply text-white text-sm text-center sm:text-left p-3;
+}
+
+footer span {
+  @apply inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start;
+}
+
+footer a {
+  @apply text-whitepure p-3;
 }
